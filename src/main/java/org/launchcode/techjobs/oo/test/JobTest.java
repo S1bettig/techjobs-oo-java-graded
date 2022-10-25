@@ -84,6 +84,7 @@ public class JobTest {
 
 
         String output = "**********" +
+                "\nID: " + Yellow.getId() +
                 "\nName: " + Yellow.getName() +
                 "\nEmployer: " + Yellow.getEmployer() +
                 "\nLocation: " + Yellow.getLocation() +
