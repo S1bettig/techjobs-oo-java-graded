@@ -28,7 +28,7 @@ public class JobTest {
         Red = new Job();
         Blue = new Job();
         Green = new Job("Product tester", testEmployer, testLocation, testPositionType, testCoreCompetency);
-        Yellow = new Job();
+//        Yellow = new Job();
         Orange = new Job();
     }
 
@@ -83,14 +83,15 @@ public class JobTest {
         Yellow = new Job("Product tester", testEmployer2, testLocation2, testPositionType2, testCoreCompetency2);
 
 
-        String output = "**********" +
+        String output =
                 "\nID: " + Yellow.getId() +
                 "\nName: " + Yellow.getName() +
                 "\nEmployer: " + Yellow.getEmployer() +
                 "\nLocation: " + Yellow.getLocation() +
                 "\nPosition Type: " + Yellow.getPositionType() +
                 "\nCore Competency: " + Yellow.getCoreCompetency() +
-                "\n**********";
+                "\n"
+                ;
 
         assertEquals(output, Yellow.toString());
 
@@ -106,14 +107,15 @@ public class JobTest {
 
         Orange.getEmployer().setValue("");
         Orange.getCoreCompetency().setValue("");
-        String output = "**********" +
+        String output =
                 "\nID: " + Orange.getId() +
                 "\nName: " + Orange.getName() +
                 "\nEmployer: Data is not available" +
                 "\nLocation: " + Orange.getLocation() +
                 "\nPosition Type: " + Orange.getPositionType() +
                 "\nCore Competency: Data is not available" +
-                "\n**********";
+                "\n"
+                ;
 
         assertEquals(output, Orange.toString());
     }
@@ -127,8 +129,9 @@ public class JobTest {
 
         Orange = new Job("CyberAnalyst", testEmployer, testLocation, testPositionType, testCoreCompetency);
 
-        String line1 = Orange.toString().substring(0,9);
-        String lastLine = Orange.toString().substring(Orange.toString().length() - 10, Orange.toString().length() - 1);
+        char line1 = Orange.toString().charAt(0);
+        char lastLine = Orange.toString().charAt(Orange.toString().length() - 1);
+//        Orange.toString().charAt(Orange.toString().length() - 1)
 
         assertEquals(line1, lastLine);
     }

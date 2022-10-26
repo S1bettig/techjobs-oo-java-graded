@@ -71,14 +71,13 @@ public class Job {
         }
 
         output =
-                "**********" +
-                "\nID: " + nextId +
+                "\nID: " + id +
                         "\nName: " + name +
                         "\nEmployer: " + employer +
                         "\nLocation: " + location +
                         "\nPosition Type: " + positionType +
                         "\nCore Competency: " + coreCompetency +
-                        "\n**********";
+                        "\n";
         return output;
     }
 
